@@ -1,7 +1,9 @@
 import "./index.less";
-import { Menu, MenuProps } from "antd";
+import { Menu, MenuProps, Input, Button } from "antd";
 import { useState } from "react";
 import { router } from "../../router";
+
+const { Search } = Input;
 
 const menuItems = [
   {
@@ -37,12 +39,16 @@ function CHeader() {
   };
   return (
     <div className="c-header">
+      <div>logo</div>
       <Menu
         mode="horizontal"
         items={menuItems}
         onClick={onClick}
         selectedKeys={[current]}
+        style={{ alignItems: "center" }}
       />
+      <Search />
+      <Button>提问</Button>
     </div>
   );
 }
