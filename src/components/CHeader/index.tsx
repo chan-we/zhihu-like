@@ -35,7 +35,7 @@ function CHeader() {
 
   const onClick: MenuProps["onClick"] = (e) => {
     setCurrent(e.key);
-    router.navigate(`/${e.key === "main" ? "" : e.key}`, { replace: true });
+    router.navigate(`/${e.key === "main" ? "" : e.key}`);
   };
   return (
     <div className="c-header">
