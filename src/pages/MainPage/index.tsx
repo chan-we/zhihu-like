@@ -1,7 +1,5 @@
-import { CHeader } from "../../components";
-
 function MainPage() {
-  return <CHeader />;
+  return <div>首页</div>;
 }
 
 export default MainPage;

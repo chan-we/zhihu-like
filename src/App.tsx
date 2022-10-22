@@ -1,32 +1,15 @@
 import "./App.less";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { MainPage, StudyPage, VipPage, ExplorePage, AnswerPage } from "./pages";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <MainPage />,
-  },
-  {
-    path: "study",
-    element: <StudyPage />,
-  },
-  {
-    path: "vip",
-    element: <VipPage />,
-  },
-  {
-    path: "explore",
-    element: <ExplorePage />,
-  },
-  {
-    path: "answer",
-    element: <AnswerPage />,
-  },
-]);
+import { RouterProvider } from "react-router-dom";
+import { CHeader } from "./components";
+import { router } from "./router";
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <div>
+      <CHeader />
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
 export default App;
