@@ -1,7 +1,5 @@
-import React from 'react'
-
 function AnswerPage() {
-  return <div>等你来答</div>
+  return <div>等你来答</div>;
 }
 
-export default AnswerPage
+export default AnswerPage;

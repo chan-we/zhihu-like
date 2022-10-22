@@ -1,7 +1,5 @@
-import React from 'react'
-
 function MainPage() {
-  return <div>首页</div>
+  return <div>首页</div>;
 }
 
-export default MainPage
+export default MainPage;
