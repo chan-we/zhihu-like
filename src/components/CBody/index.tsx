@@ -1,6 +1,6 @@
 import { Menu, MenuProps } from "antd";
 import { useState } from "react";
-import { router } from "../../router";
+import { RecommandPage } from "../../pages";
 
 const menuItems = [
   {
@@ -39,6 +39,7 @@ function CBody() {
         onClick={onClick}
         selectedKeys={[current]}
       ></Menu>
+      <RecommandPage />
     </div>
   );
 }
