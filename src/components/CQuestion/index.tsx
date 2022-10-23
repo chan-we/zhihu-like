@@ -70,7 +70,10 @@ function CQuestion(props: IProps) {
           </div>
         ) : (
           <div>
-            {author.name}：{target.excerpt_new}
+            {author.name}：
+            {(target.excerpt_new as string).endsWith("…")
+              ? target.excerpt_new
+              : `${target.excerpt_new}…`}
             <a onClick={isAllActions.setTrue}>
               阅读全文 <DownOutlined />
             </a>
