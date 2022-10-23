@@ -12,14 +12,49 @@
     font-size: 20px;
     font-weight: bold;
   }
+  &-content {
+    img {
+      width: 100%;
+    }
+
+    &-voteup {
+      color: rgb(133, 144, 166);
+      margin-top: 16px;
+    }
+
+    &-author {
+      &-avatar {
+        width: 24px;
+        display: inline-block;
+      }
+
+      &-name {
+        font-weight: bold;
+        font-size: 15px;
+        margin-left: 4px;
+      }
+      &-headline::before {
+        content: "，";
+      }
+    }
+  }
   &-tail {
     display: flex;
     align-items: center;
-    > * {
-      margin-right: 24px;
-      :first-child {
-        margin-right: 2px;
+    justify-content: space-between;
+
+    &-left {
+      display: flex;
+      align-items: center;
+      > * {
+        margin-right: 24px;
+        :first-child {
+          margin-right: 2px;
+        }
       }
+    }
+    &-right {
+      cursor: pointer;
     }
   }
 }
