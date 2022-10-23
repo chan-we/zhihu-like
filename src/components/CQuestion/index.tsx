@@ -69,14 +69,21 @@ function CQuestion(props: IProps) {
             <div dangerouslySetInnerHTML={{ __html: target.content }}></div>
           </div>
         ) : (
-          <div>
-            {author.name}：
-            {(target.excerpt_new as string).endsWith("…")
-              ? target.excerpt_new
-              : `${target.excerpt_new}…`}
-            <a onClick={isAllActions.setTrue}>
-              阅读全文 <DownOutlined />
-            </a>
+          <div className="c-question-content-brief">
+            {target.thumbnail && (
+              <div className="c-question-content-brief-thumbnail">
+                <img src={target.thumbnail} alt="" />
+              </div>
+            )}
+            <div className="c-question-content-brief-text">
+              {author.name}：
+              {(target.excerpt_new as string).endsWith("…")
+                ? target.excerpt_new
+                : `${target.excerpt_new}…`}
+              <a onClick={isAllActions.setTrue}>
+                阅读全文 <DownOutlined />
+              </a>
+            </div>
           </div>
         )}
       </div>
