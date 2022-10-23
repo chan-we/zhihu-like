@@ -1,0 +1,25 @@
+.c-question {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-bottom: 1px solid #f0f2f7;
+  padding: 20px;
+  > * {
+    margin: 4px 0;
+  }
+  &-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &-tail {
+    display: flex;
+    align-items: center;
+    > * {
+      margin-right: 24px;
+      :first-child {
+        margin-right: 2px;
+      }
+    }
+  }
+}

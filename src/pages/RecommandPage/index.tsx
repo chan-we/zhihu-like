@@ -1,14 +1,27 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
+import { CQuestion } from "../../components";
 
 function RecommandPage() {
-  useEffect(() => {
-    axios.get("/api/content").then((res: any) => {
-      console.log(res);
-    });
-  });
+  const [loading, setLoading] = useState(false);
+  const [questions, setQuestions] = useState([]);
 
-  return <div>推荐</div>;
+  useEffect(() => {
+    setLoading(true);
+    axios.get("/api/content").then((res: any) => {
+      setQuestions(res.data);
+      setLoading(false);
+      console.log(res.data);
+    });
+  }, []);
+
+  return (
+    <div className="recommand-page">
+      {questions.map((question: any) => (
+        <CQuestion data={question} key={question.id} />
+      ))}
+    </div>
+  );
 }
 
 export default RecommandPage;
