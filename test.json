@@ -1,0 +1,36 @@
+[
+    {
+        "blockId": "PlantRegister",
+        "blockName": "星球居民注册",
+        "cards": [
+            {
+                "cardId": "HomeCard",
+                "cardName": "家庭信息",
+                "statusId": "NotFinished",
+                "topTip": "",
+                "forms": [
+                    {
+                        "formId": "0",
+                        "formName": "基本信息",
+                        "ifShow": "1#2.value == 0",
+                        "reproducible": false,
+                        "fields": [
+                            {
+                                "fieldId": "0",
+                                "type": "Select",
+                                "label": "与本人关系",
+                                "required": true,
+                                "editable": true,
+                                "defaultValue": "",
+                                "ifShow": "",
+                                "toolTip": ""
+                            }
+                        ]
+                    
+                    }
+                
+                ]
+            }
+        ]
+    }
+]

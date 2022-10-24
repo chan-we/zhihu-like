@@ -1,7 +1,13 @@
 import "./index.less";
-import { Menu, MenuProps, Input, Button } from "antd";
+import { Menu, MenuProps, Input, Button, Avatar } from "antd";
+import {
+  NotificationFilled,
+  MessageFilled,
+  UserOutlined,
+} from "@ant-design/icons";
 import { useState } from "react";
 import { router } from "../../router";
+import ZhihuBlue from "../../assets/images/zhihu_blue.png";
 
 const { Search } = Input;
 
@@ -39,7 +45,9 @@ function CHeader() {
   };
   return (
     <div className="c-header">
-      <div>logo</div>
+      <div className="c-header-logo">
+        <img src={ZhihuBlue} alt="" />
+      </div>
       <Menu
         mode="horizontal"
         items={menuItems}
@@ -47,8 +55,22 @@ function CHeader() {
         selectedKeys={[current]}
         style={{ alignItems: "center" }}
       />
-      <Search />
-      <Button>提问</Button>
+      <div className="c-header-center">
+        <Search />
+        <Button>提问</Button>
+      </div>
+
+      <div className="c-header-right">
+        <div className="c-header-function">
+          <NotificationFilled />
+          <span>消息</span>
+        </div>
+        <div className="c-header-function">
+          <MessageFilled />
+          <span>私信</span>
+        </div>
+        <Avatar shape="square" icon={<UserOutlined />} />
+      </div>
     </div>
   );
 }

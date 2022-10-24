@@ -1,13 +1,47 @@
 .c-header {
+  background-color: #ff7550;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #f0f0f0;
+  justify-content: center;
+  border-bottom: 1px solid #ff7550;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
 
   .ant-menu {
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #ff7550;
+    background-color: #ff7550;
+    color: white;
   }
 
   .ant-input-search {
     max-width: 350px;
+  }
+
+  &-logo {
+    width: 70px;
+    margin-right: 20px;
+    img {
+      width: 100%;
+    }
+  }
+
+  &-center {
+    min-width: 560px;
+  }
+
+  &-center,
+  &-right {
+    display: flex;
+    > * {
+      margin: 10px;
+    }
+  }
+
+  &-function {
+    display: flex;
+    flex-direction: column;
+    color: white;
   }
 }
